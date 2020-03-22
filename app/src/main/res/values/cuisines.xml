@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cuisines_array">
+        <item>Italian</item>
+        <item>Chinese</item>
+        <item>Indian</item>
+        <item>Swedish</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>Japanese</item>
+        <item>Thailand</item>
+    </string-array>
+</resources>
