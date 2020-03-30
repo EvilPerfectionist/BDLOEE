@@ -1,3 +1,2 @@
 # BDLOEE
-Here is a description on how the app works, right now 
-Please add more ...
+##The instructions about how to embed new cuisines into the app
