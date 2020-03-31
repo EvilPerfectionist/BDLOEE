@@ -24,12 +24,12 @@ new Cuisine(parameter1, parameter2, parameter3, parameter4, parameter5)
 
 Apparently, you need to initialize five parameters.
 
-* Parameter1: The name of the cuisine. The type is String. Example: `"Cuisine Name"`
+* Parameter1: The name of the cuisine. The type is String. Example: `"Chicken and Rice"`
 * Parameter2: Where to locate the picture of the cuisine. The format is `R.drawable.your_file_name`. There are two steps:
   1. Manually add the image in the folder called drawable-xxhdpi. The path is app\src\main\res\drawable-xxhdpi
-  2. Copy the image name and replace the `your_file_name` of the code `R.drawable.your_file_name` with your image name. Example: `R.drawable.chicken_and_rice`
-* Parameter3: The ingredients used in this cuisine. The format is `Arrays.asList("first ingredient", "second ingredient", ...)`. Each ingredient name is the type of String. Example: `Arrays.asList("Tomato", "Carrot", "Potato")`
-  * ***Attention***: The first letter of the ingredient must be written in capital. In other words, "Tomato" is correct, while "tomato" is false. (The reason of this is that I will explain later)
+  2. Copy the image name and replace `your_file_name` in the code `R.drawable.your_file_name` with your image name. Example: `R.drawable.chicken_and_rice`
+* Parameter3: The ingredients used in this cuisine. The format is `Arrays.asList("first ingredient", "second ingredient", ...)`. Each ingredient name has the type of String. Example: `Arrays.asList("Tomato", "Carrot", "Potato")`
+  * ***Attention***: The first letter of the ingredient must be written in capital. In other words, "Tomato" is correct, while "tomato" is false. (The reason of this I will explain later)
 * Parameter4: The time to prepare for the cuisine. The type is String.
   * ***Attention***: Currently there are only three options: `"Long", "Medium", "Short"`, you must choose one of them to fill in this parameter. (The reason I do this is that, in my opinion, the customers would not care the exact time to prepare for the meal but pay attention to whether they need to spend a lot of time on it.)
-* Parameter5: Which country is this cuisine is originated from. The type is string. The options definitely include `"Swedish", "Indian", "Chinese", "Italian"`.
+* Parameter5: Which country this cuisine is originated from. The type is String. The options definitely include `"Swedish", "Indian", "Chinese", "Italian"`.
