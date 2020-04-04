@@ -47,4 +47,10 @@ Protein beef = new Protein("Beef", Protein.TYPE_UNPRESSED);
 proteinList.add(beef);
 ```
 
-Therefore, these four functions store all the possible ingredients we can provide for our customers to choose. As the name suggests, in `initFruits()` I add all the vegetable and fruit choices, in `initProteins()` I add all the protein choices, in `initSpices` I add all the spice choices, in `initCarbon()` I add all the carbon choices
+The first line of code creates a new Protein instance with two parameters. The first parameter initializes the name of this instance, the second parameter initializes the initial type of this instance. There are two types available. If you choose `TYPE_UNPRESSED`, then the matched button will shown as unselected on the screen. On the contrary, if you choose `TYPE_PRESSED`, then the matched button will shown as selected on the screen.
+
+The second line of code then adds this instance to a list.
+
+After iterating these two steps many times, we will finally get four lists which contain all the vegetable and fruit instances, all the protein instances, all the spice instances, all the carbon instances. Then I transfer these lists to the ***SecondActivity.java*** when we load the second page.
+
+Therefore, these four functions store all the possible ingredients we can provide for our customers to choose. As the name suggests, in `initFruits()` I add all the vegetable and fruit choices, in `initProteins()` I add all the protein choices, in `initSpices` I add all the spice choices, in `initCarbon()` I add all the carbon choices.
