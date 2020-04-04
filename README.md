@@ -35,3 +35,16 @@ Apparently, you need to initialize five parameters.
 * Parameter5: Which country this cuisine is originated from. The type is String. The options definitely include `"Swedish", "Indian", "Chinese", "Italian"`.
 
 There are still something to do after you expanding the list.
+
+However, before doing these things, it is important to understand the current method to match the ingredients with a certain cuisine.
+
+At the end of the file ***Mainactivity.java***, you can see four private functions, `initFruits(), initProteins(), initSpices(), initCarbon()`. Each element inside these functions represent one button shown on the first page of the app.
+
+For example, if I add two lines of code below, you can see a button called "Beef" shown on the first page.
+
+```java
+Protein beef = new Protein("Beef", Protein.TYPE_UNPRESSED);
+proteinList.add(beef);
+```
+
+Therefore, these four functions store all the possible ingredients we can provide for our customers to choose. As the name suggests, in `initFruits()` I add all the vegetable and fruit choices, in `initProteins()` I add all the protein choices, in `initSpices` I add all the spice choices, in `initCarbon()` I add all the carbon choices
