@@ -33,3 +33,5 @@ Apparently, you need to initialize five parameters.
 * Parameter4: The time to prepare for the cuisine. The type is String.
   * ***Attention***: Currently there are only three options: `"Long", "Medium", "Short"`, you must choose one of them to fill in this parameter. (The reason I do this is that, in my opinion, the customers would not care the exact time to prepare for the meal but pay attention to whether they need to spend a lot of time on it.)
 * Parameter5: Which country this cuisine is originated from. The type is String. The options definitely include `"Swedish", "Indian", "Chinese", "Italian"`.
+
+There are still something to do after you expanding the list.
