@@ -51,6 +51,50 @@ The first line of code creates a new Protein instance with two parameters. The f
 
 The second line of code then adds this instance to a list.
 
-After iterating these two steps many times, we will finally get four lists which contain all the vegetable and fruit instances, all the protein instances, all the spice instances, all the carbon instances. Then I transfer these lists to the ***SecondActivity.java*** when we load the second page.
+After iterating these two steps many times, we will finally get four lists which contain all the vegetable and fruit instances, all the protein instances, all the spice instances, all the carbon instances. Then I transfer these instances to the ***SecondActivity.java*** when we load the second page.
+
+In ***SecondActivity.java***, I create a List called `ingredient_names`.
+
+```java
+private List<String> ingredient_names = new ArrayList<>();
+```
+
+Then I extract the name parameters from the four lists of instances and store them into this `ingredient_names` List. Of course, before we add the name of a instance to the `ingredient_names` List, we use function `getType()` to check whether the ingredient belongs to the type of `TYPE_UNPRESSED` or `TYPE_PRESSED`. As long as the type of a instance belongs to `TYPE_PRESSED`, we add the name of this instance into the `ingredient_names` List because this means that the customer has this ingredient available.
+
+```java
+for(Fruit single_fruit : passed_fruitList){
+    if(single_fruit.getType() == 1){
+        ingredient_names.add(single_fruit.getName());
+    }
+}
+for(Protein single_protein : passed_proteinList){
+    if(single_protein.getType() == 1){
+        ingredient_names.add(single_protein.getName());
+    }
+}
+for(Spice single_spice : passed_spiceList){
+    if(single_spice.getType() == 1){
+        ingredient_names.add(single_spice.getName());
+    }
+}
+
+for(Carbon single_carbon : passed_carbonList){
+    if(single_carbon.getType() == 1){
+        ingredient_names.add(single_carbon.getName());
+    }
+}
+```
+
+As `ingredient_names` List now contains all the names of ingredients that we have, we can check whether the names of ingredients of a new added cuisine are included in this `ingredient_names` List.
+
+```java
+for (int index = 0; index < cuisines.length; index++) {
+    if(ingredient_names.containsAll(cuisines[index].getIngredientsList()) && time.equals(cuisines[index].getcooking_time()) && cuisine.equals(cuisines[index].getCuisine_country())){
+        cuisineList.add(cuisines[index]);
+    }
+}
+```
+
+The code above means that
 
 Therefore, these four functions store all the possible ingredients we can provide for our customers to choose. As the name suggests, in `initFruits()` I add all the vegetable and fruit choices, in `initProteins()` I add all the protein choices, in `initSpices` I add all the spice choices, in `initCarbon()` I add all the carbon choices.
