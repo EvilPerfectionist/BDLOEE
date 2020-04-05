@@ -95,6 +95,8 @@ for (int index = 0; index < cuisines.length; index++) {
 }
 ```
 
-The code above means that
+This for loop will go through all the cuisines stored in the `cuisines` List.
+
+For each specific cuisine, take cuisines[index] as an example, we can use its `getIngredientsList()` method to return all the names of its ingredients. Then we can use `ingredient_names.containsAll()` function to check whether the total ingredients list contains all the necessary ingredients needed by this certain cuisine. Also, we use `getcooking_time()` method to return its cooking time range and `getCuisine_country()` method to return its country type, such as "Swedish", "Chinese", "Indian" and so on. If the time and country of this specific cuisine match the selection of the user in the first page as well as the user has all the ingredients needed for this cuisine, then this cuisine will be added to the `cuisineList`, as shown in the last line of the code above. This `cuisineList` contains the final cuisines shown on the screen.
 
 Therefore, these four functions store all the possible ingredients we can provide for our customers to choose. As the name suggests, in `initFruits()` I add all the vegetable and fruit choices, in `initProteins()` I add all the protein choices, in `initSpices` I add all the spice choices, in `initCarbon()` I add all the carbon choices.
