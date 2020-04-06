@@ -6,6 +6,36 @@
 
 Open ***SecondActivity.java***, which is located in the path: app\\src\\main\\java\\com\\example\\buttonsarray
 
+Find the cuisine list, which controls all the possible cuisines we can show in our app.
+
+```java
+private Cuisine[] cuisines = {
+  ...
+  new Cuisine("Moose scab with chanterelles and raw-stirred lingonberries", R.drawable.moose_scab_with_chanterelles_and_raw_stirred_lingonberries, Arrays.asList("Mushroom", "Butter", "Black Pepper", "Onion", "Cream", "Soy Sauce", "Berry", "Sugar", "Potato"), "Short", "Swedish"),
+  new Cuisine("Musty leafy stew", R.drawable.mustig_lovbiffsgryta, Arrays.asList("Beef", "Butter", "Tomato", "Soy Sauce", "Cream"), "Long", "Swedish")
+};
+
+Add new cuisines in a similar way in the format of:
+
+```java
+new Cuisine(parameter1, parameter2, parameter3, parameter4, parameter5)
+```
+
+* Parameter1 is name
+* Parameter2 is the way to load the picture. First put the picture in the folder called drawable-xxhdpi. The path is app\src\main\res\drawable-xxhdpi. Then replace the `R.drawable.your_file_name` with your image name.
+* Parameter3 are the names of ingredients used in this cuisine. ***Attention***: The first letter of the names of the ingredients must be written in capital.
+* Parameter4 is time to prepare for the cuisine. ***Attention***: Currently there are only three options: `"Long", "Medium", "Short"`, you must choose one of them to fill in this parameter.
+* Parameter5 is which country this cuisine is originated from. The options definitely include `"Swedish", "Indian", "Chinese", "Italian"`.
+
+Open ***Mainactivity.java***, which is located in the path: app\\src\\main\\java\\com\\example\\buttonsarray
+
+Then check whether the new added cuisine contains ingredients which the four lists `initFruits(), initProteins(), initSpices(), initCarbon()` do not have, you should add these ingredients into these lists. The format is similar with the two lines of code below:
+
+```java
+Protein beef = new Protein("Beef", Protein.TYPE_UNPRESSED);
+proteinList.add(beef);
+```
+
 ### Detailed Version
 
 There are two activities in the app project. In other words, the app can show two different pages.
