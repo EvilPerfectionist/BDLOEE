@@ -111,4 +111,5 @@ Now you should understand the method that matches the ingredients with a certain
 new Cuisine(parameter1, parameter2, parameter3, parameter4, parameter5)
 ```
 
-You should check whether in parameter 3 the first letter of the ingredients are written in capital because all the first letter of the names of the available ingredients I initialized in `initFruits(), initProteins(), initSpices(), initCarbon()` are written in capital. In other words, `ingredient_names.containsAll()` function will return false when all the ingredient names stored in `ingredient_names` List are in capitals but all the ingredient names initialized in the new cuisine is in lower case.
+* You should check whether in parameter 3 the first letter of the ingredients are written in capital because all the first letter of the names of the available ingredients I initialized in `initFruits(), initProteins(), initSpices(), initCarbon()` are written in capital. In other words, `ingredient_names.containsAll()` function will return false when all the ingredient names stored in `ingredient_names` List are in capitals but all the ingredient names initialized in the new cuisine is in lower case.
+* If the new added cuisine contains ingredients which the four lists `initFruits(), initProteins(), initSpices(), initCarbon()` don't have, you should add these ingredients into these lists.
